@@ -17,7 +17,7 @@ The Target classes and value count for each class were:
 
 The features I used were:
 - **Type**: Animal Type (Cat, Dog, Other)
-- **Sex**: Male, Female, Neutered, Spayed, Unkown
+- **Sex**: Male, Female, Neutered, Spayed, Unknown
 - **Size**: Toy, Small, Medium, Large, X-Large
 - **Intake Type**: Reason for intake (i.e. Stray, Owner Surrender, Confiscation, etc.)
 - **Intake Subtype**: Sub-reason for intake (i.e. Field, Over the Counter)
@@ -27,7 +27,7 @@ The features I used were:
 - **PredomColor**: Color of animal.  Where animal was multi-colored, first color listed
 - **Days in Shelter**: # of Days animal spent in shelter
 - **IntakeAgeYrs**: Intake Date - Birth Date (in years)
-Plus Interaction terms for these features.
+- Interaction terms
 
 ## EDA
 My biggest issue with this dataset was that all features were categorical.  This meant that if I were to One Hot Encode all of my features, the dimensions of my dataset would be huge.  So I spent a good amount of time cleaning up categories such as "Breed" and "Color" into "PredomBreed" (Predominant Breed) and "PredomColor" (Predominant Color).  Below are the final Breeds included in modeling:

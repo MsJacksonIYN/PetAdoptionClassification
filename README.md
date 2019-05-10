@@ -1,6 +1,12 @@
 # Animal Shelter Outcome Classification
 Classification Project - Predicting whether animals of Sonoma County Animal Shelter will be adopted, returned to their owner, transferred, or euthanized 
 
+- [Data](#data)
+- [EDA](#eda)
+  - [Taking a look at Outcome based on different variables:](#taking-a-look-at-outcome-based-on-different-variables)
+- [Modeling](#modeling)
+- [Next Steps](#next-steps)
+
 ## Data
 Data came from [County of Sonoma Department of Health Services](https://data.sonomacounty.ca.gov/Government/Animal-Shelter-Intake-and-Outcome/924a-vesw). Animal intake dates ranged from 8/16/2013 to 5/4/2019.  My final (cleaned) dataset had 16,457 data points. 
 

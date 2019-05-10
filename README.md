@@ -74,9 +74,9 @@ For modeling, I created LabelEncoded my categorical variables for the sake of ti
     - Accuracy: .7913
  - KNN with SMOTE upsampling
     - Accuracy: .7795
-- Random Forrest
+- Random Forest
     - Accuracy: .8615
- - Random Forrest with SMOTE upsampling
+ - Random Forest with SMOTE upsampling
     - Accuracy: .8600
  - XGBoost
     - Accuracy: .8639

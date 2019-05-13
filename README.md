@@ -3,7 +3,10 @@ Classification Project - Predicting whether animals of Sonoma County Animal Shel
 
 - [Data](#data)
 - [EDA](#eda)
-  - [Taking a look at Outcome based on different variables:](#taking-a-look-at-outcome-based-on-different-variables)
+  - [Breed](#breed)
+  - [Outcome based on:](#outcome-based-on)
+     - [Intake Condition](#intake-condition)
+     - [Days in Shelter](#days-in-shelter)
 - [Modeling](#modeling)
 - [Next Steps](#next-steps)
 
@@ -30,6 +33,7 @@ The features I used were:
 - Interaction terms
 
 ## EDA
+### Breed
 My biggest issue with this dataset was that all features were categorical.  This meant that if I were to One Hot Encode all of my features, the dimensions of my dataset would be huge.  So I spent a good amount of time cleaning up categories such as "Breed" and "Color" into "PredomBreed" (Predominant Breed) and "PredomColor" (Predominant Color).  Below are the final Breeds included in modeling:
 
 **Cat Breeds:**
@@ -44,15 +48,15 @@ My biggest issue with this dataset was that all features were categorical.  This
 
 ![other](https://github.com/MsJacksonIYN/PetAdoptionClassification/blob/master/viz/other_breeds.png)
 
-### Taking a look at Outcome based on different variables: 
+### Outcome based on: 
 
-**Intake Condition:** <br>
+#### Intake Condition
 It's easy to see that healthy anmials usually are adopted or returned to their original owner.  Only animals labeled "Untreatable" have a high concentration of Euthanization.
 
 
 ![intake condition](https://github.com/MsJacksonIYN/PetAdoptionClassification/blob/master/viz/outcome_by_intakecond.png)
 
-**Days In Shelter:** <br>
+#### Days In Shelter
 Animals that they are trying to find new homes for (adoption) tend to stay in the shelter the longest.
 
 ![days in shelter](https://github.com/MsJacksonIYN/PetAdoptionClassification/blob/master/viz/days_in_shelter.png)
@@ -60,6 +64,8 @@ Animals that they are trying to find new homes for (adoption) tend to stay in th
 
 ## Modeling
 For modeling, I created LabelEncoded my categorical variables for the sake of time and keeping dimensionality low.  I then created interaction terms for all of my variables.  When all was said and done I had 66 features that were loaded into each model. 
+
+![corr](https://github.com/MsJacksonIYN/PetAdoptionClassification/blob/master/viz/correlation.png)
 
 **Models Attempted**
  - Logistic Regression
@@ -96,4 +102,7 @@ Taking a look at feature importance shows that important features include Intake
 ![feat importance](https://github.com/MsJacksonIYN/PetAdoptionClassification/blob/master/viz/feature_importance.png)
 
 ## Next Steps
-With more time, I would like to One Hot encode the variables that aren't ordinal, and spend more time looking at feature importance to tune and reduce complexity of my models.
+With more time, I would like to:
+- One Hot encode the variables that aren't ordinal
+- Spend more time looking at feature importance to tune and reduce complexity of models
+- See if I can get decent results without using Intake Condition
